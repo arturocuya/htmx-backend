@@ -1,0 +1,9 @@
+{{define "main-input"}}
+<form id="main-input" class="flex flex-row w-full" hx-swap-oob="true">
+	<div>
+		<span>&gt;</span>
+		<input name="message" class="bg-transparent border border-green-500" type="text" autofocus/>
+	</div>
+	<button class="ml-4" hx-post="/send-message" hx-target="#messages">Send</button>
+</form>
+{{end}}

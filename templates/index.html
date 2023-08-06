@@ -4,14 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello beb</title>
+    <title>HTMX chat</title>
     <script src="https://unpkg.com/htmx.org@1.9.4"
         integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV"
-        crossorigin="anonymous"></script>
+	crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <p>Hello {{.Name}}</p>
+<body class="bg-black">
+	<div class="flex justify-center items-center width-screen">
+		<div
+			id="chat-box"
+			class="flex flex-col
+				justify-between
+				border
+				border-green-500
+				w-[750px]
+				h-[400px]
+				mt-[200px]
+				p-4
+				text-green-500
+				font-mono"
+			>
+			<div id="messages">
+			</div>
+			{{template "main-input"}}
+		</div>
 </body>
 
 </html>
